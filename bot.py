@@ -37,7 +37,7 @@ async def main() -> None:
     db = Database(config.db_path)
     await db.connect()
     if await seed_demo(db):
-        log.info("Добавлены демо-квиз и демо-опрос")
+        log.info("Добавлен стартовый квиз")
 
     bot = Bot(
         config.token,
