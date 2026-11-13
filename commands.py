@@ -7,14 +7,12 @@ from aiogram.types import BotCommand, BotCommandScopeChat, BotCommandScopeDefaul
 USER_COMMANDS = [
     BotCommand(command="start", description="Главное меню"),
     BotCommand(command="help", description="Как пользоваться ботом"),
-    BotCommand(command="id", description="Узнать свой Telegram ID"),
 ]
 
 ADMIN_COMMANDS = [
     BotCommand(command="start", description="Главное меню"),
     BotCommand(command="admin", description="Админ-панель"),
     BotCommand(command="cancel", description="Отменить действие"),
-    BotCommand(command="id", description="Узнать свой Telegram ID"),
 ]
 
 

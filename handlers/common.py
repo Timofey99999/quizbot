@@ -36,7 +36,6 @@ async def start(message: Message, command: CommandObject, state: FSMContext, db:
     await show_home(message, db, is_admin, fresh=True)
 
 
-@router.message(Command("id"))
 async def my_id(message: Message):
     await message.answer(
         f"🪪 Твой Telegram ID: <code>{message.from_user.id}</code>\n\n"
@@ -52,7 +51,6 @@ async def help_command(message: Message, is_admin: bool):
         "• /start — главное меню со всеми квизами",
         "• Отвечай кнопками или текстом — бот подскажет, как именно",
         "• Если выйти посреди квиза, прогресс сохранится",
-        "• /id — узнать свой Telegram ID",
     ]
     if is_admin:
         lines += ["", "⚙️ /admin — админ-панель", "↩️ /cancel — прервать любое действие в панели"]
